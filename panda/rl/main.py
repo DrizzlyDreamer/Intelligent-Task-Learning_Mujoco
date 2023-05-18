@@ -1,5 +1,5 @@
 """ Launch RL training and evaluation. """
-
+import re
 import sys
 import signal
 import os
@@ -7,9 +7,11 @@ import json
 import numpy as np
 import torch
 from mpi4py import MPI
+sys.path.append("/home/zhangshidi/GitHub/1_Reproduce/Intelligent-Task-Learning_Mujoco/panda/")
 from config import argparser
-from rl.trainer import Trainer
+from trainer import Trainer
 from utils.logger import logger
+
 
 
 np.set_printoptions(precision=3)
